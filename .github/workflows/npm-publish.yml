@@ -23,11 +23,21 @@ jobs:
         run: |
           ls -R
         working-directory: ${{env.working-directory}}
-      - run: npm install
-      - run: npm lint
-      - run: npm prettier
-      - run: npm build
-      - run: npm test
+      - run: | 
+          npm install
+        working-directory: ${{env.working-directory}}
+      - run: | 
+          npm lint
+        working-directory: ${{env.working-directory}}
+      - run: | 
+          npm prettier
+        working-directory: ${{env.working-directory}}
+      - run: | 
+          npm build
+        working-directory: ${{env.working-directory}}
+      - run: |
+          npm test
+        working-directory: ${{env.working-directory}}
 
 #   publish-npm:
 #     needs: build
