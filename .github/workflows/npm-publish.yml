@@ -27,7 +27,7 @@ jobs:
           npm install
         working-directory: ${{env.working-directory}}
       - run: | 
-          npm lint
+          npm run lint
         working-directory: ${{env.working-directory}}
       - run: | 
           npm prettier
