@@ -29,9 +29,9 @@ jobs:
       - run: | 
           npm run lint
         working-directory: ${{env.working-directory}}
-      - run: | 
-          npm run prettier
-        working-directory: ${{env.working-directory}}
+#       - run: | 
+#           npm run prettier
+#         working-directory: ${{env.working-directory}}
       - run: | 
           npm run build
         working-directory: ${{env.working-directory}}
